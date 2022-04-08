@@ -161,77 +161,30 @@ flow_21=cbind(flow_21,year_21,month_21)
 flow_22=cbind(flow_22,year_22,month_22)
 flow_23=cbind(flow_23,year_23,month_23)
 
-agg_1 = aggregate(flow_1[,2],by = list(flow_1[,3],flow_1[,4]), FUN = sum)
-agg_2 = aggregate(flow_2[,2],by = list(flow_2[,3],flow_2[,4]), FUN = sum)
-agg_3 = aggregate(flow_3[,2],by = list(flow_3[,3],flow_3[,4]), FUN = sum)
-agg_4 = aggregate(flow_4[,2],by = list(flow_4[,3],flow_4[,4]), FUN = sum)
-agg_5 = aggregate(flow_5[,2],by = list(flow_5[,3],flow_5[,4]), FUN = sum)
-agg_6 = aggregate(flow_6[,2],by = list(flow_6[,3],flow_6[,4]), FUN = sum)
-agg_7 = aggregate(flow_7[,2],by = list(flow_7[,3],flow_7[,4]), FUN = sum)
-agg_8 = aggregate(flow_8[,2],by = list(flow_8[,3],flow_8[,4]), FUN = sum)
-agg_9 = aggregate(flow_9[,2],by = list(flow_9[,3],flow_9[,4]), FUN = sum)
-agg_10 = aggregate(flow_10[,2],by = list(flow_10[,3],flow_10[,4]), FUN = sum)
-agg_11 = aggregate(flow_11[,2],by = list(flow_11[,3],flow_11[,4]), FUN = sum)
-agg_12 = aggregate(flow_12[,2],by = list(flow_12[,3],flow_12[,4]), FUN = sum)
-agg_13 = aggregate(flow_13[,2],by = list(flow_13[,3],flow_13[,4]), FUN = sum)
-agg_14 = aggregate(flow_14[,2],by = list(flow_14[,3],flow_14[,4]), FUN = sum)
-agg_15 = aggregate(flow_15[,2],by = list(flow_15[,3],flow_15[,4]), FUN = sum)
-agg_16 = aggregate(flow_16[,2],by = list(flow_16[,3],flow_16[,4]), FUN = sum)
-agg_17 = aggregate(flow_17[,2],by = list(flow_17[,3],flow_17[,4]), FUN = sum)
-agg_18 = aggregate(flow_18[,2],by = list(flow_18[,3],flow_18[,4]), FUN = sum)
-agg_19 = aggregate(flow_19[,2],by = list(flow_19[,3],flow_19[,4]), FUN = sum)
-agg_20 = aggregate(flow_20[,2],by = list(flow_20[,3],flow_20[,4]), FUN = sum)
-agg_21 = aggregate(flow_21[,2],by = list(flow_21[,3],flow_21[,4]), FUN = sum)
-agg_22 = aggregate(flow_22[,2],by = list(flow_22[,3],flow_22[,4]), FUN = sum)
-agg_23 = aggregate(flow_23[,2],by = list(flow_23[,3],flow_23[,4]), FUN = sum)
-
-agg_1 = agg_1[order(agg_1$Group.1),]
-agg_2 = agg_2[order(agg_2$Group.1),]
-agg_3 = agg_3[order(agg_3$Group.1),]
-agg_4 = agg_4[order(agg_4$Group.1),]
-agg_5 = agg_5[order(agg_5$Group.1),]
-agg_6 = agg_6[order(agg_6$Group.1),]
-agg_7 = agg_7[order(agg_7$Group.1),]
-agg_8 = agg_8[order(agg_8$Group.1),]
-agg_9 = agg_9[order(agg_9$Group.1),]
-agg_10 = agg_10[order(agg_10$Group.1),]
-agg_11 = agg_11[order(agg_11$Group.1),]
-agg_12 = agg_12[order(agg_12$Group.1),]
-agg_13 = agg_13[order(agg_13$Group.1),]
-agg_14 = agg_14[order(agg_14$Group.1),]
-agg_15 = agg_15[order(agg_15$Group.1),]
-agg_16 = agg_16[order(agg_16$Group.1),]
-agg_17 = agg_17[order(agg_17$Group.1),]
-agg_18 = agg_18[order(agg_18$Group.1),]
-agg_19 = agg_19[order(agg_19$Group.1),]
-agg_20 = agg_20[order(agg_20$Group.1),]
-agg_21 = agg_21[order(agg_21$Group.1),]
-agg_22 = agg_22[order(agg_22$Group.1),]
-agg_23 = agg_23[order(agg_23$Group.1),]
-
-ts_1=ts(agg_1[,3],start=c(2007,1),frequency = 12)
-ts_2=ts(agg_2[,3],start=c(2007,1),frequency = 12)
-ts_3=ts(agg_3[,3],start=c(2007,1),frequency = 12)
-ts_4=ts(agg_4[,3],start=c(2007,1),frequency = 12)
-ts_5=ts(agg_5[,3],start=c(2007,1),frequency = 12)
-ts_6=ts(agg_6[,3],start=c(2007,1),frequency = 12)
-ts_7=ts(agg_7[,3],start=c(2007,1),frequency = 12)
-ts_8=ts(agg_8[,3],start=c(2007,1),frequency = 12)
-ts_9=ts(agg_9[,3],start=c(2007,1),frequency = 12)
-ts_10=ts(agg_10[,3],start=c(2007,1),frequency = 12)
-ts_11=ts(agg_11[,3],start=c(2007,1),frequency = 12)
-ts_12=ts(agg_12[,3],start=c(2007,1),frequency = 12)
-ts_13=ts(agg_13[,3],start=c(2007,1),frequency = 12)
-ts_14=ts(agg_14[,3],start=c(2007,1),frequency = 12)
-ts_15=ts(agg_15[,3],start=c(2007,1),frequency = 12)
-ts_16=ts(agg_16[,3],start=c(2007,1),frequency = 12)
-ts_17=ts(agg_17[,3],start=c(2007,1),frequency = 12)
-ts_18=ts(agg_18[,3],start=c(2007,1),frequency = 12)
-ts_19=ts(agg_19[,3],start=c(2007,1),frequency = 12)
-ts_20=ts(agg_20[,3],start=c(2007,1),frequency = 12)
-ts_21=ts(agg_21[,3],start=c(2007,1),frequency = 12)
-ts_22=ts(agg_22[,3],start=c(2007,1),frequency = 12)
-ts_23=ts(agg_23[,3],start=c(2007,1),frequency = 12)
+###classify the data
+ts_1=ts(flow_1[,3],start=c(2007,1),frequency = 12)
+ts_2=ts(flow_2[,3],start=c(2007,1),frequency = 12)
+ts_3=ts(flow_3[,3],start=c(2007,1),frequency = 12)
+ts_4=ts(flow_4[,3],start=c(2007,1),frequency = 12)
+ts_5=ts(flow_5[,3],start=c(2007,1),frequency = 12)
+ts_6=ts(flow_6[,3],start=c(2007,1),frequency = 12)
+ts_7=ts(flow_7[,3],start=c(2007,1),frequency = 12)
+ts_8=ts(flow_8[,3],start=c(2007,1),frequency = 12)
+ts_9=ts(flow_9[,3],start=c(2007,1),frequency = 12)
+ts_10=ts(flow_10[,3],start=c(2007,1),frequency = 12)
+ts_11=ts(flow_11[,3],start=c(2007,1),frequency = 12)
+ts_12=ts(flow_12[,3],start=c(2007,1),frequency = 12)
+ts_13=ts(flow_13[,3],start=c(2007,1),frequency = 12)
+ts_14=ts(flow_14[,3],start=c(2007,1),frequency = 12)
+ts_15=ts(flow_15[,3],start=c(2007,1),frequency = 12)
+ts_16=ts(flow_16[,3],start=c(2007,1),frequency = 12)
+ts_17=ts(flow_17[,3],start=c(2007,1),frequency = 12)
+ts_18=ts(flow_18[,3],start=c(2007,1),frequency = 12)
+ts_19=ts(flow_19[,3],start=c(2007,1),frequency = 12)
+ts_20=ts(flow_20[,3],start=c(2007,1),frequency = 12)
+ts_21=ts(flow_21[,3],start=c(2007,1),frequency = 12)
+ts_22=ts(flow_22[,3],start=c(2007,1),frequency = 12)
+ts_23=ts(flow_23[,3],start=c(2007,1),frequency = 12)
 
 
 autoplot(ts_1)
